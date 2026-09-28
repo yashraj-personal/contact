@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>YASH RAJ — Official Support, Contact &amp; Inquiry Portal</title>
+<meta name="description" content="Official support and contact portal for YASH CREATES TECH. Submit questions, support requests, and business inquiries.">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Apply saved/system theme before paint to avoid a flash of the wrong theme.
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem("yr_theme"); } catch (e) {}
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.classList.add("js");
+  })();
+</script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="YASH RAJ — back to top">
+      <img src="logo.png" alt="YASH CREATES TECH logo" class="brand-mark">
+      <span class="brand-text">
+        <span class="brand-name">YASH RAJ</span>
+        <span class="brand-sub">YASH CREATES TECH</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button type="button" class="icon-btn" id="soundToggle" aria-pressed="true" aria-label="Turn form sound off">
+        <svg class="icon-sound-on" viewBox="0 0 24 24" fill="none"><path d="M4 9.5v5h3.6L12.5 19V5L7.6 9.5H4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 9.2a4 4 0 0 1 0 5.6M18.6 6.8a7.6 7.6 0 0 1 0 10.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-sound-off" viewBox="0 0 24 24" fill="none"><path d="M4 9.5v5h3.6L12.5 19V5L7.6 9.5H4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m16.5 9.5 4 5m0-5-4 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.75v2.1M12 19.15v2.1M4.75 12h-2.1M21.35 12h-2.1M6.1 6.1 4.6 4.6M19.4 19.4l-1.5-1.5M6.1 17.9l-1.5 1.5M19.4 4.6l-1.5 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none"><path d="M20.25 14.2A8.25 8.25 0 1 1 9.8 3.75a6.6 6.6 0 0 0 10.45 10.45Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="#request-form" class="btn btn-primary btn-sm header-cta">New Request</a>
+    </div>
+  </div>
+  <span class="scroll-progress" aria-hidden="true"></span>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="orbs" aria-hidden="true">
+      <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
+    </div>
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal">Official Support, Contact &amp; Inquiry Portal</p>
+
+      <h1 class="hero-title" aria-label="How can we help?">
+        <span class="word" style="--i:0" aria-hidden="true">How</span>
+        <span class="word" style="--i:1" aria-hidden="true">can</span>
+        <span class="word" style="--i:2" aria-hidden="true">we</span>
+        <span class="word grad" style="--i:3" aria-hidden="true">help?</span>
+      </h1>
+
+      <p class="hero-desc reveal" style="--d:250ms">Have a question, need support, or want to get in touch? Submit your request through the official portal and our team will follow up directly.</p>
+
+      <div class="hero-actions reveal" style="--d:380ms">
+        <a href="#request-form" class="btn btn-primary btn-lg">Start a Request</a>
+        <a href="#services" class="link-arrow">See what we help with
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="m9.5 5.5 6.5 6.5-6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-visual reveal" style="--d:520ms" aria-hidden="true" id="tiltZone">
+        <div class="float">
+          <div class="ticket-card" id="ticketCard">
+            <div class="ticket-card-top">
+              <span class="ticket-label">Support Ticket</span>
+              <span class="ticket-status"><i class="status-dot"></i>Open</span>
+            </div>
+            <div class="ticket-id" id="ticketScramble">YR-2026XXXX-XXXX</div>
+            <div class="ticket-divider"></div>
+            <div class="ticket-row"><span>Inquiry Type</span><strong>Support / Help</strong></div>
+            <div class="ticket-row"><span>Priority</span><strong>Normal</strong></div>
+            <div class="ticket-row"><span>Status</span><strong>Received</strong></div>
+            <span class="ticket-sheen"></span>
+          </div>
+          <div class="ticket-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-intro reveal">
+        <h2>Whatever you need,<br><span class="muted">we're here for it.</span></h2>
+      </div>
+
+      <div class="tiles">
+        <a href="#request-form" class="tile reveal" data-type="General Question" style="--d:0ms">
+          <span class="tile-icon tile-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 17.5v.01M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.6-2.4 2-2.4 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.8"/></svg>
+          </span>
+          <span class="tile-title">General Questions</span>
+          <span class="tile-desc">Anything about the channel, content, or how things work.</span>
+          <span class="tile-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 5.5v13M6.5 13 12 18.5 17.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="#request-form" class="tile reveal" data-type="Support / Help" style="--d:100ms">
+          <span class="tile-icon tile-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.75 4.25 6v6c0 4.6 3.2 7.9 7.75 9.25C16.55 19.9 19.75 16.6 19.75 12V6L12 2.75Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12.25 11.1 14.4 15.25 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="tile-title">Support &amp; Help</span>
+          <span class="tile-desc">Technical issues, account help, or something not working.</span>
+          <span class="tile-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 5.5v13M6.5 13 12 18.5 17.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="#request-form" class="tile reveal" data-type="Collaboration" style="--d:200ms">
+          <span class="tile-icon tile-orange" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 8.25 12 3.5l8.5 4.75V16l-8.5 4.5L3.5 16V8.25Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3.75 8.5 12 13l8.25-4.5M12 13v7.75" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="tile-title">Business &amp; Collaboration</span>
+          <span class="tile-desc">Sponsorships, partnerships, and collaboration inquiries.</span>
+          <span class="tile-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 5.5v13M6.5 13 12 18.5 17.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <section class="form-section" id="request-form">
+    <div class="wrap form-wrap">
+
+      <!-- FORM VIEW -->
+      <form id="supportForm" class="portal-card reveal" novalidate>
+        <div class="form-head">
+          <h2>Submit a Request</h2>
+          <p>Fields marked <span class="req">*</span> are required.</p>
+          <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+          <p class="progress-text" id="progressText" aria-live="polite">0 of 8 required fields complete</p>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="form-section-block">
+          <div class="section-heading">
+            <span class="section-num">1</span>
+            <span>Personal Details</span>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" required autocomplete="name" maxlength="100">
+              <span class="field-error" id="err-fullName"></span>
+            </div>
+
+            <div class="field">
+              <label for="age">Age <span class="req">*</span></label>
+              <input type="number" id="age" name="age" required min="5" max="120" inputmode="numeric">
+              <span class="field-error" id="err-age"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <span class="field-error" id="err-email"></span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              <span class="field-error" id="err-phone"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="form-section-block">
+          <div class="section-heading">
+            <span class="section-num">2</span>
+            <span>Request Details</span>
+          </div>
+
+          <div class="field">
+            <label for="inquiryType">Inquiry Type <span class="req">*</span></label>
+            <select id="inquiryType" name="inquiryType" required>
+              <option value="" disabled selected>Select an inquiry type</option>
+              <option>General Question</option>
+              <option>Support / Help</option>
+              <option>Technical Issue</option>
+              <option>Feedback</option>
+              <option>Collaboration</option>
+              <option>Business / Sponsorship</option>
+              <option>Website Quote</option>
+              <option>Report a Problem</option>
+              <option>Other</option>
+            </select>
+            <span class="field-error" id="err-inquiryType"></span>
+          </div>
+
+          <div class="field">
+            <label for="issueShort">Issue in Short <span class="req">*</span></label>
+            <input type="text" id="issueShort" name="issueShort" required maxlength="150" placeholder="A one-line summary of your request">
+            <div class="counter-row"><span class="field-error" id="err-issueShort"></span><span class="char-counter" id="count-issueShort">0 / 150</span></div>
+          </div>
+
+          <div class="field">
+            <label for="issueLong">Explain Your Issue / Question <span class="req">*</span></label>
+            <textarea id="issueLong" name="issueLong" required maxlength="2000" rows="6" placeholder="Share as much detail as you can — what happened, what you expected, and any steps you've already tried."></textarea>
+            <div class="counter-row"><span class="field-error" id="err-issueLong"></span><span class="char-counter" id="count-issueLong">0 / 2000</span></div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label id="priorityLabel">Priority</label>
+              <div class="segmented" id="priorityGroup" role="group" aria-labelledby="priorityLabel" style="--i:0">
+                <span class="seg-thumb" aria-hidden="true"></span>
+                <button type="button" class="seg-btn" data-value="Normal" aria-pressed="true">Normal</button>
+                <button type="button" class="seg-btn" data-value="Important" aria-pressed="false">Important</button>
+                <button type="button" class="seg-btn" data-value="Urgent" aria-pressed="false">Urgent</button>
+              </div>
+              <input type="hidden" id="priority" name="priority" value="Normal">
+            </div>
+
+            <div class="field">
+              <label id="contactLabel">Preferred Contact Method</label>
+              <div class="segmented" id="contactGroup" role="group" aria-labelledby="contactLabel" style="--i:0">
+                <span class="seg-thumb" aria-hidden="true"></span>
+                <button type="button" class="seg-btn" data-value="Email" aria-pressed="true">Email</button>
+                <button type="button" class="seg-btn" data-value="Phone" aria-pressed="false">Phone</button>
+                <button type="button" class="seg-btn" data-value="WhatsApp" aria-pressed="false">WhatsApp</button>
+              </div>
+              <input type="hidden" id="contactMethod" name="contactMethod" value="Email">
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT -->
+        <div class="form-section-block">
+          <div class="section-heading">
+            <span class="section-num">3</span>
+            <span>Attach Screenshot (Optional)</span>
+          </div>
+          <p class="hint-text">Optional — attach a screenshot only when it helps explain your issue.</p>
+
+          <div class="file-drop" id="fileDrop">
+            <input type="file" id="screenshot" name="screenshot" accept="image/*" class="sr-only">
+            <label for="screenshot" class="file-drop-label" id="fileDropLabel">
+              <span class="drop-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" width="26" height="26"><path d="M12 15.5V4.5M12 4.5 7.5 9M12 4.5 16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 15.5v2.75c0 .97.78 1.75 1.75 1.75h11.5a1.75 1.75 0 0 0 1.75-1.75V15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <span class="drop-title">Choose an image, drag one here, or paste it</span>
+              <span class="file-drop-meta">PNG or JPG, up to 5&nbsp;MB · Tip: press Ctrl/⌘ + V to paste a screenshot</span>
+            </label>
+          </div>
+
+          <div class="file-processing" id="fileProcessing" hidden>
+            <span class="mini-spinner" aria-hidden="true"></span>
+            <span>Preparing your image…</span>
+          </div>
+
+          <div class="file-preview" id="filePreview" hidden>
+            <img id="filePreviewImg" alt="Selected screenshot preview">
+            <div class="file-preview-info">
+              <span id="filePreviewName"></span>
+              <span id="filePreviewSize" class="file-preview-size"></span>
+            </div>
+            <button type="button" class="file-remove" id="fileRemove" aria-label="Remove screenshot">Remove</button>
+          </div>
+          <span class="field-error" id="err-screenshot" role="alert"></span>
+        </div>
+
+        <!-- CONSENT -->
+        <div class="form-section-block">
+          <label class="checkbox-row">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>I confirm that the information provided is accurate. <span class="req">*</span></span>
+          </label>
+          <span class="field-error" id="err-consent"></span>
+
+          <p class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 2.75 4.5 6v6c0 4.6 3.2 7.9 7.5 9.25C16.3 19.9 19.5 16.6 19.5 12V6L12 2.75Z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8.5v4.25M12 15.5v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Please do not submit passwords, OTPs, payment PINs, or other highly sensitive information.
+          </p>
+        </div>
+
+        <div class="form-footer-actions">
+          <span class="submit-error" id="submitError" role="alert"></span>
+          <button type="submit" class="btn btn-primary btn-lg btn-submit" id="submitBtn">
+            <span class="btn-label">Submit Request</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+
+      <!-- SUCCESS VIEW -->
+      <div class="portal-card state-card" id="successCard" hidden>
+        <div class="state-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none" width="80" height="80">
+            <circle class="check-ring" cx="40" cy="40" r="36" stroke="currentColor" stroke-width="4"/>
+            <path class="check-path" d="M24 41.5 35 52.5 57 29" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Your query is submitted</h2>
+        <div class="ticket-display">
+          <span>Your ticket ID is</span>
+          <strong id="ticketIdDisplay">—</strong>
+        </div>
+        <p class="hint-text">Please keep your ticket ID for future reference. Proceed to Home, or raise another ticket.</p>
+        <div class="state-actions">
+          <button type="button" class="btn btn-primary btn-lg" id="resetFormBtn">Raise another ticket</button>
+          <a href="https://www.youtube.com/@Yashcreatestech" class="btn btn-secondary btn-lg" id="homeBtn">Home</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="" class="footer-mark">
+      <div>
+        <span class="brand-name">YASH RAJ</span>
+        <span class="footer-sub">Official Support &amp; Contact Portal</span>
+      </div>
+    </div>
+    <div class="footer-counter">
+      <span class="footer-counter-label">Portal Visits</span>
+      <span class="footer-counter-value" id="visitCounter">—</span>
+    </div>
+  </div>
+  <p class="footer-line">Your message matters. Thank you for getting in touch.</p>
+</footer>
+
+<!-- Hidden iframe target for Apps Script form submission -->
+<iframe name="gas-submit-target" id="gasSubmitTarget" hidden title="Form submission target"></iframe>
+
+<script src="script.js"></script>
+</body>
+</html>

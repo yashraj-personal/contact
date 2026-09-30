@@ -1,0 +1,82 @@
+<script>
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyXmphuuzbDH1FYIBDsALifyhmOHTujmN9ETp7f0kw3ztjvBaHNwmDA8zFwBFco2Qgl/exec";
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = form.querySelector("button[type='submit']");
+
+    // Prevent multiple submissions
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+
+    const formData = new FormData();
+
+    // Collect form fields
+    formData.append(
+        "name",
+        document.querySelector("[name='name']")?.value || ""
+    );
+
+    formData.append(
+        "age",
+        document.querySelector("[name='age']")?.value || ""
+    );
+
+    formData.append(
+        "email",
+        document.querySelector("[name='email']")?.value || ""
+    );
+
+    formData.append(
+        "phone",
+        document.querySelector("[name='phone']")?.value || ""
+    );
+
+    formData.append(
+        "shortIssue",
+        document.querySelector("[name='shortIssue']")?.value || ""
+    );
+
+    formData.append(
+        "detailedIssue",
+        document.querySelector("[name='detailedIssue']")?.value || ""
+    );
+
+    formData.append(
+        "screenshot",
+        document.querySelector("[name='screenshot']")?.value || ""
+    );
+
+    try {
+
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        });
+
+        // Show success message
+        alert("Your response has been submitted successfully!");
+
+        // Clear form
+        form.reset();
+
+    } catch (error) {
+
+        console.error("Submission error:", error);
+
+        alert(
+            "Something went wrong while submitting your response. Please try again."
+        );
+
+    } finally {
+
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+    }
+});
+</script>
